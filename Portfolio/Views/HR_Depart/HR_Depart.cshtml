@@ -1,0 +1,186 @@
+﻿@model  Portfolio.Models.mdlHR_Depart
+@{
+    ViewBag.Title = "HR_Depart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+
+    input.form-control {
+        background-color: #f8f9fa; /* Light Gray Background */
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .input-group-text {
+        background-color: #73879C; /* Matching Panel Header */
+        color: white;
+        border: 1px solid #ced4da;
+    }
+</style>
+<div class=role ="main">
+    <div class="col-md-12 col-sm-12">
+        <div class="x_panel">
+            <div class="x_content">
+                <!--<ul class="nav nav-tabs bar_tabs" id="my_Tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active TabServiceSetup" id="setup-tabs" data-toggle="tab" href="#setup" role="tab" aria-controls="home" aria-selected="true">Service Setup</a>
+                    </li>-->
+                @*<li class="nav-item">
+                        <a class="nav-link" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="profile" aria-selected="false">NCB Loading Scale List</a>
+                    </li>*@
+                <!--</ul>-->
+                @*<div class="tab-content" id="myTabContents">
+                    <div class="tab-pane fade show active" id="setup" role="tabpanel" aria-labelledby="home-tab">*@
+                <div class="col-md-12 col-sm-12">
+                    <form id="HR_form">
+                        <div class="container">
+                            <div class="x_panel">
+                                <div class="x_title" style="background-color: #73879C !important; color: white !important; padding: 5px !important; ">
+                                    <h2 id="Heading">HR_Department:</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="form-label-left input_mask" style="margin-top: -30px;">
+                                        <div class="row mt-3">
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">FirstName</span>
+                                                        @Html.TextBoxFor(m => Model.FirstName, new { @class = "form-control", placeholder = "Enter FirstName" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">LastName</span>
+                                                        @Html.TextBoxFor(m => Model.LastName, new { @class = "form-control", placeholder = "Enter LastName" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Gender</span>
+                                                        @Html.TextBoxFor(m => Model.Gender, new { @class = "form-control", placeholder = "Enter Gender" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Email</span>
+                                                        @Html.TextBoxFor(m => Model.Email, new { @class = "form-control", placeholder = "Enter Email" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">PhoneNumber</span>
+                                                        @Html.TextBoxFor(m => Model.PhoneNumber, new { @class = "form-control", placeholder = "Enter PhoneNumber" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Address</span>
+                                                        @Html.TextBoxFor(m => Model.Address, new { @class = "form-control", placeholder = "Enter Address" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-md-4">
+                                                <div style="margin-top: 25px;">-->
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <!--<div class="input-group">
+                                                        <span class="input-group-text">HireDate</span>
+                                                        @Html.TextBoxFor(m => Model.HireDate, new { @class = "form-control", placeholder = "Enter HireDate" })
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">JobTitle</span>
+                                                        @Html.TextBoxFor(m => Model.JobTitle, new { @class = "form-control", placeholder = "Enter JobTitle" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div style="margin-top: 25px;">
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Salary</span>
+                                                        @Html.TextBoxFor(m => Model.Salary, new { @class = "form-control", placeholder = "Enter Salary" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-md-4">
+                                                <div style="margin-top: 25px;">-->
+                                                    @*<label class="form-label">Claims</label>*@
+                                                    <!--<div class="input-group">
+                                                        <span class="input-group-text">EmplyementStatus</span>
+                                                        @Html.TextBoxFor(m => Model.EmploymentStatus, new { @class = "form-control", placeholder = "Enter EmploymentStatus" })
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        @*<div class="row d-flex justify-content-center align-items-center" style="margin-top: 25px; height: 100px;">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" id="btnNCBSave" class="btn btn-primary" style="font-size: 15px; padding: 12px 24px; width: 200px; height: 30px;">Save</button>
+                                </div>
+                            </div>*@
+                        <div class="row text-center" style="padding-top: 20px;">
+                            <div class="col-md-12">
+                                <button type="submit" id="btnSaveHR" class="btn btn-primary btn-lg" style="width: 150px; height: 40px;">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+
+                                    <table id="tblHR" class="table table-striped table-bordered dt-responsive " cellspacing="0" width="100%">
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+                @*</div>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/HR_Depart.js"></script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetInquiryList();
+    });
+
+</script>
+
